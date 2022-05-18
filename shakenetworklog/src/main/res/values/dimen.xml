@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="snl_padding_s">12dp</dimen>
+    <dimen name="snl_padding_m">16dp</dimen>
+
+    <dimen name="snl_margin_s">12dp</dimen>
+    <dimen name="snl_margin_m">16dp</dimen>
+    <dimen name="snl_margin_xl">24dp</dimen>
+
+</resources>

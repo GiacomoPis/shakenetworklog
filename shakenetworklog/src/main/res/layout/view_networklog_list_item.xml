@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="12dp">
+
+        <LinearLayout
+            android:id="@+id/container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/requestMethodTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                tools:text="POST" />
+
+            <TextView
+                android:id="@+id/requestStatusTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/snl_margin_s"
+                android:textColor="@color/snl_green"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                tools:text="200" />
+
+            <TextView
+                android:id="@+id/requestSpeedTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/snl_margin_s"
+                android:gravity="center_horizontal"
+                android:textStyle="bold"
+                tools:text="300 ms" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/requestUrlTv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/snl_margin_m"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:textColor="@color/snl_black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/container"
+            app:layout_constraintTop_toTopOf="@id/container"
+            tools:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in" />
+
+        <TextView
+            android:id="@+id/requestExceptionTv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/snl_margin_m"
+            android:layout_marginTop="@dimen/snl_margin_m"
+            android:ellipsize="end"
+            android:textColor="@color/snl_red"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/container"
+            app:layout_constraintTop_toBottomOf="@id/requestUrlTv"
+            tools:text="exception message" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="app/src/main/res/layout/main_fragment.xml" value="0.5255208333333333" />
+        <entry key="shakenetworklog/src/main/res/layout/activity_network_call_body_detail.xml" value="0.5255208333333333" />
+        <entry key="shakenetworklog/src/main/res/layout/activity_network_call_detail.xml" value="0.4524003254678601" />
+        <entry key="shakenetworklog/src/main/res/layout/activity_network_call_list.xml" value="0.49227013832384053" />
+        <entry key="shakenetworklog/src/main/res/layout/activity_networklog.xml" value="0.5255208333333333" />
+        <entry key="shakenetworklog/src/main/res/layout/view_networklog_list_item.xml" value="0.2723112128146453" />
+        <entry key="shakenetworklog/src/main/res/layout/view_networklog_list_item2.xml" value="0.430525865754596" />
+        <entry key="shakenetworklog/src/main/res/layout/view_networklog_list_item_new.xml" value="0.5255208333333333" />
+        <entry key="shakenetworklog/src/main/res/menu/list_menu.xml" value="0.25" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

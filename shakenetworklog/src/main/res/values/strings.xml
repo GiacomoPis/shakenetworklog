@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="snl_lib_name">Shake Network Log</string>
+
+    <string name="snl_overview">SUMMARY</string>
+    <string name="snl_request_header">REQUEST HEADERS</string>
+    <string name="snl_request_body">REQUEST BODY</string>
+    <string name="snl_view_body">SHOW BODY</string>
+    <string name="snl_response_header">RESPONSE HEADERS</string>
+    <string name="snl_response_body">RESPONSE BODY</string>
+
+</resources>

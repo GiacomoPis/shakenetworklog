@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="snl_black">#000</color>
+    <color name="snl_white">#FFF</color>
+    <color name="snl_green">#148F14</color>
+    <color name="snl_red">#CF1414</color>
+    <color name="snl_blue">#1212D5</color>
+    <color name="snl_orange">#DC753D</color>
+
+</resources>

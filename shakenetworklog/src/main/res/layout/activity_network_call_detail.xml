@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:animateLayoutChanges="true"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/networkCallDetailPath"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/snl_margin_m"
+                android:textColor="@color/snl_black"
+                android:textIsSelectable="true"
+                android:textSize="18dp"
+                tools:text="url" />
+
+            <TextView
+                style="@style/ShakeNetworkLog.Title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/snl_overview" />
+
+            <TextView
+                android:id="@+id/networkCallDetailOverviewContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/snl_margin_m"
+                android:textColor="@color/snl_black"
+                android:textIsSelectable="true"
+                tools:text="general info" />
+
+            <TextView
+                style="@style/ShakeNetworkLog.Title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/snl_request_header" />
+
+            <TextView
+                android:id="@+id/networkCallDetailRequestHeaderContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/snl_margin_m"
+                android:textColor="@color/snl_black"
+                android:textIsSelectable="true"
+                tools:text="headers go here" />
+
+            <TextView
+                style="@style/ShakeNetworkLog.Title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/snl_request_body" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/requestBodyButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/snl_margin_s"
+                android:padding="@dimen/snl_padding_m"
+                android:text="@string/snl_view_body" />
+
+            <TextView
+                style="@style/ShakeNetworkLog.Title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/snl_response_header" />
+
+            <TextView
+                android:id="@+id/networkCallDetailResponseHeaderContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/snl_margin_m"
+                android:textColor="@color/snl_black"
+                android:textIsSelectable="true"
+                tools:text="headers go here" />
+
+            <TextView
+                style="@style/ShakeNetworkLog.Title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/snl_response_body" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/responseBodyButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/snl_margin_s"
+                android:padding="@dimen/snl_padding_m"
+                android:text="@string/snl_view_body" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+</layout>

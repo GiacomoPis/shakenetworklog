@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="it.icemangp.shakenetworklog">
+
+    <application>
+
+        <activity
+            android:name=".ui.ActivityNetworkCallList"
+            android:label="@string/snl_lib_name"
+            android:theme="@style/Theme.ShakeNetworkLog"/>
+
+        <activity
+            android:name=".ui.ActivityNetworkCallDetail"
+            android:label="@string/snl_lib_name"
+            android:theme="@style/Theme.ShakeNetworkLog" />
+
+        <activity
+            android:name=".ui.ActivityNetworkCallBodyDetail"
+            android:label="@string/snl_lib_name"
+            android:theme="@style/Theme.ShakeNetworkLog" />
+
+    </application>
+
+</manifest>
