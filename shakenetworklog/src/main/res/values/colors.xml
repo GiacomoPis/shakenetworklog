@@ -1,5 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <color name="colorPrimary">#0834B6</color>
+    <color name="colorPrimaryVariant">#072785</color>
+    <color name="colorOnPrimary">#E1E0E0</color>
+
+    <color name="defaultBackgroundColor">#E1E0E0</color>
+    <color name="titleBackgroundColor">#8F8F8F</color>
+
+    <color name="success">#209317</color>
+    <color name="error">#DC753D</color>
+    <color name="failure">#CE2222</color>
+
+    <color name="lightTextColor">#9F9F9F</color>
+    <color name="regularTextColor">#151515</color>
 
     <color name="snl_black">#000</color>
     <color name="snl_white">#FFF</color>

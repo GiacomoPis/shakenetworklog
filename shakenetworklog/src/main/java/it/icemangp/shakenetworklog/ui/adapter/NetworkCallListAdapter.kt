@@ -47,9 +47,9 @@ class NetworkCallListAdapter(var list: List<NetworkCall>, val listener: ItemClic
         holder.requestExceptionTv.text = item.exceptionMessage
 
         val color = when (item.responseCode) {
-            in 0..399 -> R.color.snl_green
-            in 400..499 -> R.color.snl_orange
-            else -> R.color.snl_red
+            in 0..399 -> R.color.success
+            in 400..499 -> R.color.error
+            else -> R.color.failure
         }
 
         holder.responseCodeTv.setTextColor(ContextCompat.getColor(holder.itemView.context, color))

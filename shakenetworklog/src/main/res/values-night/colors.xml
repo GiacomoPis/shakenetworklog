@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#092D9A</color>
+    <color name="colorPrimaryVariant">#051B5E</color>
+    <color name="colorOnPrimary">#B3B3B3</color>
+
+    <color name="defaultBackgroundColor">#232323</color>
+    <color name="titleBackgroundColor">#515151</color>
+
+
+    <color name="success">#209317</color>
+    <color name="error">#DC753D</color>
+    <color name="failure">#C42121</color>
+
+    <color name="lightTextColor">#9F9F9F</color>
+    <color name="regularTextColor">#DCDCDC</color>
+</resources>
