@@ -1,5 +1,7 @@
 package it.icemangp.shakenetworklog.data
 
+import java.util.*
+
 data class NetworkCall(
     val id: String,
     val method: String,
@@ -10,5 +12,7 @@ data class NetworkCall(
     val requestBody: String,
     val responseHeaders: Map<String,String>,
     val responseBody: String,
-    val exceptionMessage: String
+    val exceptionMessage: String,
+    val requestDate: Date,
+    val responseHeaderDate: Date,
 )
