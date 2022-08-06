@@ -8,6 +8,7 @@ import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import it.icemangp.shakenetworklog.R
 import it.icemangp.shakenetworklog.data.NetworkCall
+import java.text.SimpleDateFormat
 
 class NetworkCallListAdapter(var list: List<NetworkCall>, val listener: ItemClickListener) : RecyclerView.Adapter<NetworkCallListAdapter.NetworkCallListViewHolder>() {
 
@@ -17,11 +18,14 @@ class NetworkCallListAdapter(var list: List<NetworkCall>, val listener: ItemClic
 
     class NetworkCallListViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val requestMethodTv    : TextView = view.findViewById(R.id.requestMethodTv)
+        val requestDateTimeTv    : TextView = view.findViewById(R.id.requestDateTimeTv)
         val responseCodeTv     : TextView = view.findViewById(R.id.requestStatusTv)
         val requestSpeedTv     : TextView = view.findViewById(R.id.requestSpeedTv)
         val requestUrlTv       : TextView = view.findViewById(R.id.requestUrlTv)
         val requestExceptionTv : TextView = view.findViewById(R.id.requestExceptionTv)
     }
+
+    private val dateFormat = SimpleDateFormat("HH:mm:ss dd/MM/yyyy")
 
     override fun onCreateViewHolder(viewGroup: ViewGroup, viewType: Int): NetworkCallListViewHolder {
         val view = LayoutInflater.from(viewGroup.context).inflate(R.layout.view_networklog_list_item, viewGroup, false)
@@ -42,6 +46,7 @@ class NetworkCallListAdapter(var list: List<NetworkCall>, val listener: ItemClic
         val item = list[position]
         holder.requestMethodTv.text = item.method
         holder.requestSpeedTv.text = item.duration
+        holder.requestDateTimeTv.text = dateFormat.format(item.requestDate)
         holder.responseCodeTv.text = item.responseCode?.toString() ?: " "
         holder.requestUrlTv.text = item.url
         holder.requestExceptionTv.text = item.exceptionMessage
@@ -52,7 +57,7 @@ class NetworkCallListAdapter(var list: List<NetworkCall>, val listener: ItemClic
             else -> R.color.snl_red
         }
 
-        holder.responseCodeTv.setTextColor(ContextCompat.getColor(holder.itemView.context, color))
+        holder.responseCodeTv.setBackgroundColor(ContextCompat.getColor(holder.itemView.context, color))
     }
 
     fun updateData(data: List<NetworkCall>) {

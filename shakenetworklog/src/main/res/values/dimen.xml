@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <dimen name="snl_padding_2xs">4dp</dimen>
+    <dimen name="snl_padding_xs">8dp</dimen>
     <dimen name="snl_padding_s">12dp</dimen>
     <dimen name="snl_padding_m">16dp</dimen>
 

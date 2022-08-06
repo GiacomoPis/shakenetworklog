@@ -9,44 +9,71 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="12dp">
+        android:layout_height="wrap_content">
 
-        <LinearLayout
-            android:id="@+id/container"
+        <TextView
+            android:id="@+id/requestMethodTv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/snl_padding_xs"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:background="@color/itemlist_header_background"
+            app:layout_constraintEnd_toStartOf="@+id/requestDateTimeTv"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:textColor="@color/snl_white"
+            tools:text="POST" />
+
+        <TextView
+            android:id="@+id/requestStatusTv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/snl_green"
+            android:paddingBottom="@dimen/snl_padding_xs"
+            android:textColor="@color/snl_white"
+            android:textSize="18dp"
+            android:gravity="center"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/requestMethodTv"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/requestMethodTv"
+            tools:text="200" />
+
+        <TextView
+            android:id="@+id/requestSpeedTv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            android:gravity="center"
+            android:paddingHorizontal="@dimen/snl_padding_xs"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/requestMethodTv"
+            app:layout_constraintStart_toStartOf="@+id/requestMethodTv"
+            app:layout_constraintTop_toBottomOf="@+id/requestStatusTv"
+            tools:text="300 ms" />
 
-            <TextView
-                android:id="@+id/requestMethodTv"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textStyle="bold"
-                tools:text="POST" />
 
-            <TextView
-                android:id="@+id/requestStatusTv"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/snl_margin_s"
-                android:textColor="@color/snl_green"
-                android:textSize="18dp"
-                android:textStyle="bold"
-                tools:text="200" />
 
-            <TextView
-                android:id="@+id/requestSpeedTv"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/snl_margin_s"
-                android:gravity="center_horizontal"
-                android:textStyle="bold"
-                tools:text="300 ms" />
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrierStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="end"
+            app:constraint_referenced_ids="requestSpeedTv,requestStatusTv,requestMethodTv" />
 
-        </LinearLayout>
+        <TextView
+            android:id="@+id/requestDateTimeTv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/snl_margin_m"
+            android:paddingVertical="@dimen/snl_padding_xs"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/barrierStart"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="@color/itemlist_header_background"
+            tools:text="10/10/1000 10:10:10"
+            android:textColor="@color/snl_white"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/requestUrlTv"
@@ -56,9 +83,9 @@
             android:ellipsize="end"
             android:gravity="center_vertical"
             android:textColor="@color/snl_black"
+            app:layout_constraintBaseline_toBaselineOf="@+id/requestStatusTv"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@id/container"
-            app:layout_constraintTop_toTopOf="@id/container"
+            app:layout_constraintStart_toEndOf="@id/barrierStart"
             tools:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in" />
 
         <TextView
@@ -70,7 +97,7 @@
             android:ellipsize="end"
             android:textColor="@color/snl_red"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@id/container"
+            app:layout_constraintStart_toEndOf="@id/barrierStart"
             app:layout_constraintTop_toBottomOf="@id/requestUrlTv"
             tools:text="exception message" />
 
