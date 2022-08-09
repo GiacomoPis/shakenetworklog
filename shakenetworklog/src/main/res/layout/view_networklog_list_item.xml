@@ -13,8 +13,9 @@
 
         <TextView
             android:id="@+id/requestMethodTv"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:minWidth="80dp"
             android:padding="@dimen/snl_padding_xs"
             android:textStyle="bold"
             android:gravity="center"
@@ -23,14 +24,14 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             android:textColor="@color/snl_white"
-            tools:text="POST" />
+            tools:text="DELETE" />
 
         <TextView
             android:id="@+id/requestStatusTv"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:background="@color/snl_green"
-            android:paddingBottom="@dimen/snl_padding_xs"
+            android:paddingVertical="@dimen/snl_padding_xs"
             android:textColor="@color/snl_white"
             android:textSize="18dp"
             android:gravity="center"
@@ -38,7 +39,7 @@
             app:layout_constraintEnd_toEndOf="@+id/requestMethodTv"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/requestMethodTv"
-            tools:text="200" />
+            tools:text="300" />
 
         <TextView
             android:id="@+id/requestSpeedTv"
@@ -50,7 +51,7 @@
             app:layout_constraintEnd_toEndOf="@+id/requestMethodTv"
             app:layout_constraintStart_toStartOf="@+id/requestMethodTv"
             app:layout_constraintTop_toBottomOf="@+id/requestStatusTv"
-            tools:text="300 ms" />
+            tools:text="30000 ms" />
 
 
 
@@ -71,7 +72,7 @@
             app:layout_constraintStart_toEndOf="@+id/barrierStart"
             app:layout_constraintTop_toTopOf="parent"
             android:background="@color/itemlist_header_background"
-            tools:text="10/10/1000 10:10:10"
+            tools:text="10:10:10.123"
             android:textColor="@color/snl_white"
             android:textStyle="bold" />
 

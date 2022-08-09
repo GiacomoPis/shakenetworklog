@@ -25,7 +25,7 @@ class NetworkCallListAdapter(var list: List<NetworkCall>, val listener: ItemClic
         val requestExceptionTv : TextView = view.findViewById(R.id.requestExceptionTv)
     }
 
-    private val dateFormat = SimpleDateFormat("HH:mm:ss dd/MM/yyyy")
+    private val dateFormat = SimpleDateFormat("HH:mm:ss.SSS")
 
     override fun onCreateViewHolder(viewGroup: ViewGroup, viewType: Int): NetworkCallListViewHolder {
         val view = LayoutInflater.from(viewGroup.context).inflate(R.layout.view_networklog_list_item, viewGroup, false)
